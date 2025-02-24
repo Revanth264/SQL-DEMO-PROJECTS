@@ -1,0 +1,21 @@
+CREATE DATABASE SampleDB;
+use Sampledb;
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    Salary DECIMAL(10, 2)
+);
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Age, Salary)
+VALUES
+(1, 'John', 'Doe', 28, 55000.00),
+(2, 'Jane', 'Smith', 34, 62000.00),
+(3, 'Sam', 'Wilson', 45, 72000.00),
+(4, 'Lucy', 'Brown', 39, 65000.00),
+(5, 'Michael', 'Davis', 40, 70000.00);
+select * from Employees
+SELECT FirstName, Salary FROM Employees;
+SELECT * FROM Employees WHERE Age > 35;
+SELECT * FROM Employees ORDER BY Salary DESC;
+
